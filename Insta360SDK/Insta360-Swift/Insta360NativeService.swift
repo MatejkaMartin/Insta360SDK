@@ -91,6 +91,7 @@ public protocol Insta360NativeServicing {
 #else
 
     @_implementationOnly import INSCameraSDK
+    @_implementationOnly import INSCoreMedia
 
     public class Insta360NativeService: Insta360NativeServicing {
 
