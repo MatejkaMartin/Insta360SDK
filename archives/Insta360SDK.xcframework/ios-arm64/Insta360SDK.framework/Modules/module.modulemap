@@ -1,0 +1,11 @@
+framework module Insta360SDK {
+  umbrella header "Insta360SDK.h"
+
+  export *
+  module * { export * }
+}
+
+module Insta360SDK.Swift {
+    header "Insta360SDK-Swift.h"
+    requires objc
+}

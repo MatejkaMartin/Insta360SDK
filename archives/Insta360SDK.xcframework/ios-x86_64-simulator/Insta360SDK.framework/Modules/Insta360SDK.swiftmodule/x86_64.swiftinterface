@@ -1,0 +1,38 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Insta360SDK
+import Combine
+import Foundation
+@_exported import Insta360SDK
+import Swift
+public class Insta360NativeService {
+  public init()
+  public func fetchPhoto(photoURI: Swift.String) -> Combine.AnyPublisher<Foundation.Data, Swift.Error>
+  public func connectCamera() -> Combine.AnyPublisher<Swift.Void, Swift.Error>
+  public func takePicture() -> Combine.AnyPublisher<Swift.String, Swift.Error>
+  @objc deinit
+}
+public enum NotificationKey : Swift.String {
+  case imageURI
+  case imageTimestamp
+  case cameraConnected
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NotificationValue : Swift.Encodable, Swift.Decodable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+  case string(Swift.String)
+  case number(Swift.Float)
+  case integer(Swift.Int)
+  case array([Insta360SDK.NotificationValue])
+  case object([Insta360SDK.NotificationKey : Insta360SDK.NotificationValue])
+  case bool(Swift.Bool)
+  case null
+}
+extension Insta360SDK.NotificationKey : Swift.Equatable {}
+extension Insta360SDK.NotificationKey : Swift.Hashable {}
+extension Insta360SDK.NotificationKey : Swift.RawRepresentable {}

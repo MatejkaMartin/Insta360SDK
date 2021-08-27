@@ -1,0 +1,51 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Insta360SDK
+import Combine
+import Foundation
+@_exported import Insta360SDK
+import Swift
+public enum Inta360NativeServiceError : Swift.Error {
+  case missingPhotoInfo
+  case emptyPhotoData
+  public static func == (a: Insta360SDK.Inta360NativeServiceError, b: Insta360SDK.Inta360NativeServiceError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Insta360Notification {
+}
+@_inheritsConvenienceInitializers @objc public class Insta360NativeService : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  public func connectCamera()
+  public func fetchPhoto(photoURI: Swift.String) -> Combine.AnyPublisher<Foundation.Data, Swift.Error>
+  public func takePicture() -> Combine.AnyPublisher<Swift.String, Swift.Error>
+  @objc deinit
+}
+public enum NotificationKey : Swift.String {
+  case imageURI
+  case imageTimestamp
+  case cameraConnected
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NotificationValue : Swift.Encodable, Swift.Decodable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+  case string(Swift.String)
+  case number(Swift.Float)
+  case integer(Swift.Int)
+  case array([Insta360SDK.NotificationValue])
+  case object([Insta360SDK.NotificationKey : Insta360SDK.NotificationValue])
+  case bool(Swift.Bool)
+  case null
+}
+extension Insta360SDK.Inta360NativeServiceError : Swift.Equatable {}
+extension Insta360SDK.Inta360NativeServiceError : Swift.Hashable {}
+extension Insta360SDK.NotificationKey : Swift.Equatable {}
+extension Insta360SDK.NotificationKey : Swift.Hashable {}
+extension Insta360SDK.NotificationKey : Swift.RawRepresentable {}
