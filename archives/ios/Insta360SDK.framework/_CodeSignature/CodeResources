@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/INSCameraSDK.framework/INSCameraSDK</key>
 		<data>
-		j81R0HTqxuRZ1RFOJdJRSgRccn4=
+		c5UjtASMCMMBVnGRj86R7HxfmUA=
 		</data>
 		<key>Frameworks/INSCameraSDK.framework/Info.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Frameworks/INSCoreMedia.framework/INSCoreMedia</key>
 		<data>
-		XgA9K18YuEQ9MuVYy4khCz9F7ZM=
+		6ep960xTLBIP2vIH0S+w1T4IcgU=
 		</data>
 		<key>Frameworks/INSCoreMedia.framework/Info.plist</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		mgZ2GXHsFY+xvJIaiydJqBTHGEo=
+		hwjrdU9Ex1zaMpWY6RNS2MC9hWQ=
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		MN2kp6PAm7oxzBMuewJn1z1mE/M=
+		sKOoh8e6OrxghpxeSnqbIN/dZdc=
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		mgZ2GXHsFY+xvJIaiydJqBTHGEo=
+		hwjrdU9Ex1zaMpWY6RNS2MC9hWQ=
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		MN2kp6PAm7oxzBMuewJn1z1mE/M=
+		sKOoh8e6OrxghpxeSnqbIN/dZdc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,11 +79,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j81R0HTqxuRZ1RFOJdJRSgRccn4=
+			c5UjtASMCMMBVnGRj86R7HxfmUA=
 			</data>
 			<key>hash2</key>
 			<data>
-			oOc17RIA7Y5EVC/t+DaAPFuWRkCTlh/3xOGyBKDzBUw=
+			XXI3fmZC7Ypmy+kbT0XReqe6iDixL4GWqK+Nh3ID+js=
 			</data>
 		</dict>
 		<key>Frameworks/INSCameraSDK.framework/Info.plist</key>
@@ -112,11 +112,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XgA9K18YuEQ9MuVYy4khCz9F7ZM=
+			6ep960xTLBIP2vIH0S+w1T4IcgU=
 			</data>
 			<key>hash2</key>
 			<data>
-			FVMt482VYsE5U59PKXbcxPzfx79ETro1uG75++vTZSA=
+			+Xwq6rkNr4IUYQUXEryDjme9TuqdEAQxKZANEf4o57Q=
 			</data>
 		</dict>
 		<key>Frameworks/INSCoreMedia.framework/Info.plist</key>
@@ -189,22 +189,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mgZ2GXHsFY+xvJIaiydJqBTHGEo=
+			hwjrdU9Ex1zaMpWY6RNS2MC9hWQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			srkB9+aPDWSDG3sY4R0AnPRRf0jsc2pIxAleyTAwDuw=
+			1KOl44uj9B+d/Aez4ZgHx+PCZyl6+ydDPpwz/pnBomw=
 			</data>
 		</dict>
 		<key>Modules/Insta360SDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MN2kp6PAm7oxzBMuewJn1z1mE/M=
+			sKOoh8e6OrxghpxeSnqbIN/dZdc=
 			</data>
 			<key>hash2</key>
 			<data>
-			sEdsrz/8TbDp1x8RzscsflOQKcLNZd+1UX0YqiBrrHo=
+			rUdtOIOcFG5w3hR7Efa28lCGqgF0lhE54P9Fag0J9IM=
 			</data>
 		</dict>
 		<key>Modules/Insta360SDK.swiftmodule/arm64.swiftdoc</key>
@@ -222,22 +222,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mgZ2GXHsFY+xvJIaiydJqBTHGEo=
+			hwjrdU9Ex1zaMpWY6RNS2MC9hWQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			srkB9+aPDWSDG3sY4R0AnPRRf0jsc2pIxAleyTAwDuw=
+			1KOl44uj9B+d/Aez4ZgHx+PCZyl6+ydDPpwz/pnBomw=
 			</data>
 		</dict>
 		<key>Modules/Insta360SDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MN2kp6PAm7oxzBMuewJn1z1mE/M=
+			sKOoh8e6OrxghpxeSnqbIN/dZdc=
 			</data>
 			<key>hash2</key>
 			<data>
-			sEdsrz/8TbDp1x8RzscsflOQKcLNZd+1UX0YqiBrrHo=
+			rUdtOIOcFG5w3hR7Efa28lCGqgF0lhE54P9Fag0J9IM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

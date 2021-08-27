@@ -1,6 +1,6 @@
 # Insta360SDK
 
-Current zip checksum: "88f9f4f38fe201d539618026b2fa10591825b1af096be5a6ec15f26d57b159b4"
+Current zip checksum: "79e9a723ba1a44e16e66cbe4ab8a38003bb61d51fe6113915198f6d68672bd8d"
 
 ## How compute checksume
 

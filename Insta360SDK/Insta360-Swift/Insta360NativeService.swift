@@ -1,7 +1,6 @@
 import Combine
 import Foundation
 import NetworkExtension
-import INSCameraSDK
 
 public protocol Insta360NativeServicing {
 
