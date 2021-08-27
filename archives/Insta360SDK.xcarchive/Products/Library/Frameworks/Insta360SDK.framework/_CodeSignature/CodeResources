@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/INSCameraSDK.framework/INSCameraSDK</key>
 		<data>
-		0EdeXnIXPwtpRzgOWTXUdlg4yDA=
+		j81R0HTqxuRZ1RFOJdJRSgRccn4=
 		</data>
 		<key>Frameworks/INSCameraSDK.framework/Info.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Frameworks/INSCoreMedia.framework/INSCoreMedia</key>
 		<data>
-		VLrt/UC2LkVAWFeAhW/RSQhwx2Y=
+		XgA9K18YuEQ9MuVYy4khCz9F7ZM=
 		</data>
 		<key>Frameworks/INSCoreMedia.framework/Info.plist</key>
 		<data>
@@ -79,11 +79,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0EdeXnIXPwtpRzgOWTXUdlg4yDA=
+			j81R0HTqxuRZ1RFOJdJRSgRccn4=
 			</data>
 			<key>hash2</key>
 			<data>
-			kkboa05Xk/fa5V+d9cUZt5aQqA7IyM5ZV1Ms/htojIk=
+			oOc17RIA7Y5EVC/t+DaAPFuWRkCTlh/3xOGyBKDzBUw=
 			</data>
 		</dict>
 		<key>Frameworks/INSCameraSDK.framework/Info.plist</key>
@@ -112,11 +112,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VLrt/UC2LkVAWFeAhW/RSQhwx2Y=
+			XgA9K18YuEQ9MuVYy4khCz9F7ZM=
 			</data>
 			<key>hash2</key>
 			<data>
-			BB6yZRhvnJeGJQOERSZniJvaCVOBMr90KX0WaAq6AfM=
+			FVMt482VYsE5U59PKXbcxPzfx79ETro1uG75++vTZSA=
 			</data>
 		</dict>
 		<key>Frameworks/INSCoreMedia.framework/Info.plist</key>
