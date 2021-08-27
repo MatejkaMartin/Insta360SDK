@@ -1,38 +1,150 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Insta360SDK
+import SystemConfiguration.CaptiveNetwork
 import Combine
+import CoreLocation
 import Foundation
+import INSCameraSDK
 @_exported import Insta360SDK
+import Network
+import NetworkExtension
 import Swift
-public class Insta360NativeService {
-  public init()
-  public func fetchPhoto(photoURI: Swift.String) -> Combine.AnyPublisher<Foundation.Data, Swift.Error>
-  public func connectCamera() -> Combine.AnyPublisher<Swift.Void, Swift.Error>
-  public func takePicture() -> Combine.AnyPublisher<Swift.String, Swift.Error>
+import SystemConfiguration
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SSID : ObjectiveC.NSObject, CoreLocation.CLLocationManagerDelegate {
+  public var currentSSID: Swift.String? {
+    get
+  }
+  @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
   @objc deinit
 }
-public enum NotificationKey : Swift.String {
-  case imageURI
-  case imageTimestamp
-  case cameraConnected
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+public enum Insta360CameraConnectionState : Swift.UInt {
+  case found
+  case connected
+  case connectFailed
+  case noConnection
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
     get
   }
 }
-public enum NotificationValue : Swift.Encodable, Swift.Decodable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-  case string(Swift.String)
-  case number(Swift.Float)
-  case integer(Swift.Int)
-  case array([Insta360SDK.NotificationValue])
-  case object([Insta360SDK.NotificationKey : Insta360SDK.NotificationValue])
-  case bool(Swift.Bool)
-  case null
+public struct Insta360CameraDevice {
+  public var type: Swift.String?
+  public var serialNumber: Swift.String
+  public var firmware: Swift.String
 }
-extension Insta360SDK.NotificationKey : Swift.Equatable {}
-extension Insta360SDK.NotificationKey : Swift.Hashable {}
-extension Insta360SDK.NotificationKey : Swift.RawRepresentable {}
+public protocol Insta360NativeServicing {
+  var isConnected: Combine.AnyPublisher<Swift.Bool, Swift.Never> { get }
+  var connectionState: Combine.AnyPublisher<Insta360SDK.Insta360CameraConnectionState, Swift.Never> { get }
+  var cameraDevice: Combine.AnyPublisher<Insta360SDK.Insta360CameraDevice?, Swift.Never> { get }
+  var notifications: Combine.AnyPublisher<Insta360SDK.Insta360Notification, Swift.Never> { get }
+  func tryConnect() -> Combine.AnyPublisher<Swift.Bool, Swift.Never>
+  func connect(ssid: Swift.String, password: Swift.String) -> Combine.AnyPublisher<Swift.Void, Swift.Error>
+  func takePicture() -> Combine.AnyPublisher<(Swift.String, Swift.Double), Swift.Error>
+  func takePictureFetchImageAndDeleteFromCamera() -> Combine.AnyPublisher<(Foundation.Data, Swift.Double), Swift.Error>
+  func fetchPhoto(photoURI: Swift.String) -> Combine.AnyPublisher<Foundation.Data, Swift.Error>
+  func takePictureWithoutStoring() -> Combine.AnyPublisher<(Foundation.Data, Swift.Double), Swift.Error>
+  func disconnectCamera()
+  init(wifiService: Insta360SDK.Insta360WifiService)
+}
+public class Insta360NativeService : Insta360SDK.Insta360NativeServicing {
+  public var isConnected: Combine.AnyPublisher<Swift.Bool, Swift.Never> {
+    get
+  }
+  public var connectionState: Combine.AnyPublisher<Insta360SDK.Insta360CameraConnectionState, Swift.Never> {
+    get
+  }
+  public var cameraDevice: Combine.AnyPublisher<Insta360SDK.Insta360CameraDevice?, Swift.Never> {
+    get
+  }
+  public var notifications: Combine.AnyPublisher<Insta360SDK.Insta360Notification, Swift.Never> {
+    get
+  }
+  public func tryConnect() -> Combine.AnyPublisher<Swift.Bool, Swift.Never>
+  public func connect(ssid: Swift.String, password: Swift.String) -> Combine.AnyPublisher<Swift.Void, Swift.Error>
+  public func takePicture() -> Combine.AnyPublisher<(Swift.String, Swift.Double), Swift.Error>
+  public func takePictureFetchImageAndDeleteFromCamera() -> Combine.AnyPublisher<(Foundation.Data, Swift.Double), Swift.Error>
+  public func fetchPhoto(photoURI: Swift.String) -> Combine.AnyPublisher<Foundation.Data, Swift.Error>
+  public func takePictureWithoutStoring() -> Combine.AnyPublisher<(Foundation.Data, Swift.Double), Swift.Error>
+  public func disconnectCamera()
+  required public init(wifiService: Insta360SDK.Insta360WifiService)
+  @objc deinit
+}
+extension Insta360NativeService {
+  public enum Insta360NativeServiceError : Foundation.LocalizedError {
+    case missingPhotoInfo
+    case emptyPhotoData
+    case takePictureTakeTooLong
+    public var errorDescription: Swift.String? {
+      get
+    }
+    public static func == (a: Insta360SDK.Insta360NativeService.Insta360NativeServiceError, b: Insta360SDK.Insta360NativeService.Insta360NativeServiceError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public protocol Insta360Notification {
+  var method: Swift.String { get }
+  var timestamp: Foundation.TimeInterval { get }
+}
+public struct NotificationTakePictureUpdate : Insta360SDK.Insta360Notification {
+  public let method: Swift.String
+  public var timestamp: Foundation.TimeInterval
+  public var state: Insta360SDK.NotificationTakePictureUpdate.TakePictureState
+  public enum TakePictureState : Swift.Int {
+    case prepare
+    case shutter
+    case compress
+    case writeToFile
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+public class Insta360WifiService {
+  public var isConnectedToWifiConnected: Swift.Bool {
+    get
+  }
+  public var isAcessibleCameraGateway: Swift.Bool {
+    get
+  }
+  public var isAcessibleCameraGatewayPublisher: Combine.AnyPublisher<Swift.Bool, Swift.Never> {
+    get
+  }
+  public var isRunningGatewayObservation: Swift.Bool
+  public init()
+  public func connectToWifi(ssid: Swift.String, password: Swift.String) -> Combine.AnyPublisher<Swift.Void, Swift.Error>
+  public func startAccessibilityGatewayObservation()
+  @objc deinit
+}
+extension Insta360WifiService {
+  public enum Insta360WifiServiceError : Foundation.LocalizedError {
+    case unknownReasonIfTryToConnectCameraWifi
+    public var errorDescription: Swift.String? {
+      get
+    }
+    public static func == (a: Insta360SDK.Insta360WifiService.Insta360WifiServiceError, b: Insta360SDK.Insta360WifiService.Insta360WifiServiceError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension Insta360SDK.Insta360CameraConnectionState : Swift.Equatable {}
+extension Insta360SDK.Insta360CameraConnectionState : Swift.Hashable {}
+extension Insta360SDK.Insta360CameraConnectionState : Swift.RawRepresentable {}
+extension Insta360SDK.Insta360NativeService.Insta360NativeServiceError : Swift.Equatable {}
+extension Insta360SDK.Insta360NativeService.Insta360NativeServiceError : Swift.Hashable {}
+extension Insta360SDK.NotificationTakePictureUpdate.TakePictureState : Swift.Equatable {}
+extension Insta360SDK.NotificationTakePictureUpdate.TakePictureState : Swift.Hashable {}
+extension Insta360SDK.NotificationTakePictureUpdate.TakePictureState : Swift.RawRepresentable {}
+extension Insta360SDK.Insta360WifiService.Insta360WifiServiceError : Swift.Equatable {}
+extension Insta360SDK.Insta360WifiService.Insta360WifiServiceError : Swift.Hashable {}

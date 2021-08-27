@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6172DF226D8E12E00934EBE /* Insta360CameraConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6172DF126D8E12E00934EBE /* Insta360CameraConnectionState.swift */; };
+		A6172DF426D8E14B00934EBE /* Insta360CameraDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6172DF326D8E14B00934EBE /* Insta360CameraDevice.swift */; };
+		A6172DF626D8E16B00934EBE /* Insta360Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6172DF526D8E16B00934EBE /* Insta360Notification.swift */; };
+		A6172DF826D8E1A400934EBE /* Insta360WifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6172DF726D8E1A400934EBE /* Insta360WifiService.swift */; };
+		A6172DFA26D8E1F400934EBE /* SSID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6172DF926D8E1F400934EBE /* SSID.swift */; };
 		A6384850268C59380029D02F /* Insta360NativeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A638484F268C59380029D02F /* Insta360NativeService.swift */; };
-		A6384853268C59500029D02F /* NotificationValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6384852268C59500029D02F /* NotificationValue.swift */; };
-		A6384856268C59560029D02F /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6384855268C59560029D02F /* NotificationKey.swift */; };
 		A63848F7268C95700029D02F /* INSCameraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A490CE268B550000569E15 /* INSCameraSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A63848F8268C95700029D02F /* INSCameraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A490CE268B550000569E15 /* INSCameraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A63848FA268C95710029D02F /* INSCoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A490D1268B550500569E15 /* INSCoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -49,9 +52,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6172DF126D8E12E00934EBE /* Insta360CameraConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insta360CameraConnectionState.swift; sourceTree = "<group>"; };
+		A6172DF326D8E14B00934EBE /* Insta360CameraDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insta360CameraDevice.swift; sourceTree = "<group>"; };
+		A6172DF526D8E16B00934EBE /* Insta360Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insta360Notification.swift; sourceTree = "<group>"; };
+		A6172DF726D8E1A400934EBE /* Insta360WifiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insta360WifiService.swift; sourceTree = "<group>"; };
+		A6172DF926D8E1F400934EBE /* SSID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSID.swift; sourceTree = "<group>"; };
 		A638484F268C59380029D02F /* Insta360NativeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insta360NativeService.swift; sourceTree = "<group>"; };
-		A6384852268C59500029D02F /* NotificationValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationValue.swift; sourceTree = "<group>"; };
-		A6384855268C59560029D02F /* NotificationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		A6A490CE268B550000569E15 /* INSCameraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = INSCameraSDK.framework; path = Frameworks/INSCameraSDK.framework; sourceTree = "<group>"; };
 		A6A490D1268B550500569E15 /* INSCoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = INSCoreMedia.framework; path = Frameworks/INSCoreMedia.framework; sourceTree = "<group>"; };
 		A6F4AF2F2689D8EE008F9925 /* Insta360SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Insta360SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +93,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6172DEF26D8E0B100934EBE /* Insta360-ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				A6F4AFA82689E070008F9925 /* Insta360Native.h */,
+				A6F4AFA12689E064008F9925 /* GCDTimer.h */,
+				A6F4AFA02689E064008F9925 /* GCDTimer.m */,
+				A6F4AFA22689E064008F9925 /* Insta360Native.m */,
+				A6F4AF322689D8EE008F9925 /* Insta360SDK.h */,
+			);
+			path = "Insta360-ObjectiveC";
+			sourceTree = "<group>";
+		};
+		A6172DF026D8E0C400934EBE /* Insta360-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				A638484F268C59380029D02F /* Insta360NativeService.swift */,
+				A6172DF126D8E12E00934EBE /* Insta360CameraConnectionState.swift */,
+				A6172DF326D8E14B00934EBE /* Insta360CameraDevice.swift */,
+				A6172DF526D8E16B00934EBE /* Insta360Notification.swift */,
+				A6172DF726D8E1A400934EBE /* Insta360WifiService.swift */,
+				A6172DF926D8E1F400934EBE /* SSID.swift */,
+			);
+			path = "Insta360-Swift";
+			sourceTree = "<group>";
+		};
 		A6F4AF252689D8EE008F9925 = {
 			isa = PBXGroup;
 			children = (
@@ -110,15 +141,9 @@
 		A6F4AF312689D8EE008F9925 /* Insta360SDK */ = {
 			isa = PBXGroup;
 			children = (
-				A6384855268C59560029D02F /* NotificationKey.swift */,
-				A6384852268C59500029D02F /* NotificationValue.swift */,
-				A6F4AFA82689E070008F9925 /* Insta360Native.h */,
-				A6F4AFA12689E064008F9925 /* GCDTimer.h */,
-				A6F4AFA02689E064008F9925 /* GCDTimer.m */,
-				A6F4AFA22689E064008F9925 /* Insta360Native.m */,
-				A6F4AF322689D8EE008F9925 /* Insta360SDK.h */,
+				A6172DF026D8E0C400934EBE /* Insta360-Swift */,
+				A6172DEF26D8E0B100934EBE /* Insta360-ObjectiveC */,
 				A6F4AF332689D8EE008F9925 /* Info.plist */,
-				A638484F268C59380029D02F /* Insta360NativeService.swift */,
 			);
 			path = Insta360SDK;
 			sourceTree = "<group>";
@@ -248,11 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6172DFA26D8E1F400934EBE /* SSID.swift in Sources */,
+				A6172DF226D8E12E00934EBE /* Insta360CameraConnectionState.swift in Sources */,
+				A6172DF426D8E14B00934EBE /* Insta360CameraDevice.swift in Sources */,
 				A6384850268C59380029D02F /* Insta360NativeService.swift in Sources */,
 				A6F4AFA52689E064008F9925 /* Insta360Native.m in Sources */,
-				A6384856268C59560029D02F /* NotificationKey.swift in Sources */,
-				A6384853268C59500029D02F /* NotificationValue.swift in Sources */,
+				A6172DF626D8E16B00934EBE /* Insta360Notification.swift in Sources */,
 				A6F4AFA32689E064008F9925 /* GCDTimer.m in Sources */,
+				A6172DF826D8E1A400934EBE /* Insta360WifiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

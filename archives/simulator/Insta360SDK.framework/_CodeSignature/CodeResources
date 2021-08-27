@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/Insta360SDK-Swift.h</key>
 		<data>
-		dFFQVWEpghgCrW2S5hKwNlllono=
+		oA9v1iDfQZEo6Su3ZYdOJ0k3wzU=
 		</data>
 		<key>Headers/Insta360SDK.h</key>
 		<data>
@@ -46,27 +46,27 @@
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		HmcWgcY24dTXP3qk/TQg04n9bo8=
+		FbA+lrUbd7gZROdWCLZK7UHZNE4=
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		CCWeOBJw5y1ZglcdaL20MxBB/uk=
+		xk3D2aYwLuw5oukO/Ir9ErH3sIs=
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		W12rlYtIv0owQlBo2lO5g7euSvY=
+		lmr/kmVW+lLBPms8ZjUK/bySXsA=
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		HmcWgcY24dTXP3qk/TQg04n9bo8=
+		FbA+lrUbd7gZROdWCLZK7UHZNE4=
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		CCWeOBJw5y1ZglcdaL20MxBB/uk=
+		xk3D2aYwLuw5oukO/Ir9ErH3sIs=
 		</data>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		W12rlYtIv0owQlBo2lO5g7euSvY=
+		lmr/kmVW+lLBPms8ZjUK/bySXsA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -156,11 +156,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dFFQVWEpghgCrW2S5hKwNlllono=
+			oA9v1iDfQZEo6Su3ZYdOJ0k3wzU=
 			</data>
 			<key>hash2</key>
 			<data>
-			JrntWOdG5NuHPGSCEU6NIe1CJqeIdSNHMIY6cw5tvuc=
+			0VIbIxg0ayH0x3n+12cvQqPkPY29tOCASFcLX1KZWhw=
 			</data>
 		</dict>
 		<key>Headers/Insta360SDK.h</key>
@@ -178,66 +178,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HmcWgcY24dTXP3qk/TQg04n9bo8=
+			FbA+lrUbd7gZROdWCLZK7UHZNE4=
 			</data>
 			<key>hash2</key>
 			<data>
-			HQ+DCrJDSIBbQAYqKuw6rx63TfSVsKCJqeYZzx3oJh4=
+			c6RIQhzS5SvZvHqctSpLpxs13G3CYUUhW+ikQOwgKuo=
 			</data>
 		</dict>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CCWeOBJw5y1ZglcdaL20MxBB/uk=
+			xk3D2aYwLuw5oukO/Ir9ErH3sIs=
 			</data>
 			<key>hash2</key>
 			<data>
-			1dYlRAgP8uJXgS7qeLkiSoMQMyDlZYzsAZNhgFM7ix0=
+			XLLLd2lMCwdzRI6pEOZw18ByAqbMGVt10ckOVkJpmGo=
 			</data>
 		</dict>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W12rlYtIv0owQlBo2lO5g7euSvY=
+			lmr/kmVW+lLBPms8ZjUK/bySXsA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yygz+kgV4mU5uj+HzGWB1a56N76pP+d/mvesmOIFtLs=
+			GI2MjU7ug5kuezFPK4fwLEUgDzSgOcZt+IrJ6q0/XGI=
 			</data>
 		</dict>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HmcWgcY24dTXP3qk/TQg04n9bo8=
+			FbA+lrUbd7gZROdWCLZK7UHZNE4=
 			</data>
 			<key>hash2</key>
 			<data>
-			HQ+DCrJDSIBbQAYqKuw6rx63TfSVsKCJqeYZzx3oJh4=
+			c6RIQhzS5SvZvHqctSpLpxs13G3CYUUhW+ikQOwgKuo=
 			</data>
 		</dict>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CCWeOBJw5y1ZglcdaL20MxBB/uk=
+			xk3D2aYwLuw5oukO/Ir9ErH3sIs=
 			</data>
 			<key>hash2</key>
 			<data>
-			1dYlRAgP8uJXgS7qeLkiSoMQMyDlZYzsAZNhgFM7ix0=
+			XLLLd2lMCwdzRI6pEOZw18ByAqbMGVt10ckOVkJpmGo=
 			</data>
 		</dict>
 		<key>Modules/Insta360SDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W12rlYtIv0owQlBo2lO5g7euSvY=
+			lmr/kmVW+lLBPms8ZjUK/bySXsA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yygz+kgV4mU5uj+HzGWB1a56N76pP+d/mvesmOIFtLs=
+			GI2MjU7ug5kuezFPK4fwLEUgDzSgOcZt+IrJ6q0/XGI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
